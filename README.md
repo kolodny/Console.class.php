@@ -4,7 +4,7 @@ Console.class.php
 All of Firefox(/Chrome)'s console functions
 
 
-Usage:
+Sample usage:
 
 ```php
 Console::time('test');
