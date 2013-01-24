@@ -68,7 +68,7 @@ class Console {
 			$object = isset($args_array[0]) ? $args_array[0] : null;
 			$json_value = @json_encode($object); // Warning: json_encode(): recursion detected
 			$type = ucfirst(strtolower(gettype($object)));
-			if (isset($args_string[0]) && $args_string[0] == '$' && strpos($args_string, ',') === false && (is_array($object) || is_object($object))) {
+			if (is_array($object) || is_object($object)) {
 				$var = $json_value;
 			} else {
 				switch ($type) {
